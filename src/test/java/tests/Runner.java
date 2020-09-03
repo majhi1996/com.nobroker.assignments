@@ -31,7 +31,7 @@ public class Runner
 	public WebDriverWait w;
 	public TestUtility tu;	
 	public Properties p;
-	public KeyEvent k;
+	public KeyEvent k; 
 	
 	@BeforeTest
 	public void startExecution() throws Exception
