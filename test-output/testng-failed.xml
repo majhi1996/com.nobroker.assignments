@@ -6,9 +6,11 @@
       <class name="tests.Runner">
         <methods>
           <include name="homepage"/>
-          <include name="property"/>
+          <include name="signin"/>
+          <include name="report"/>
           <include name="startExecution"/>
           <include name="stopExecution"/>
+          <include name="propertylist"/>
           <include name="search"/>
         </methods>
       </class> <!-- tests.Runner -->

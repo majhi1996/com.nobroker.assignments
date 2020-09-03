@@ -3,12 +3,15 @@ package tests;
 import java.io.File;
 import java.io.FileInputStream;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -36,13 +39,16 @@ public class Runner
 	@BeforeTest
 	public void startExecution() throws Exception
 	{
+		SimpleDateFormat sf=new SimpleDateFormat("dd-MMM-yyyy-hh-mm-ss");
+		Date d=new Date();
+		String s=sf.format(d);
 		File f=new File("D:\\AppiumFolder\\com.nobroker.assignment\\src\\test\\resources\\properties\\data.properties");
 		FileInputStream fi=new FileInputStream(f);
 		p=new Properties();
 		p.load(fi);		
 		tu=new TestUtility();
 		URL u=tu.startAppiumServer();		
-		DesiredCapabilities dc=tu.defineDesiredCapabilities(p);
+		DesiredCapabilities dc=tu.defineDesiredCapabilities(p);		
 		while(2>1)
 		{
 			try
@@ -53,7 +59,7 @@ public class Runner
 			catch(Exception e)
 			{				
 			}
-		}
+		}		
 	}
 		
 	@Test(priority=1)
@@ -82,11 +88,11 @@ public class Runner
 		String actuallocation=sp.dropdown.getText();
 		if(actuallocation.equals(sp.expectedlocation))
 		{
-			System.out.println("Bangalore is already selected");
+			Reporter.log("Bangalore is already selected");
 		}
 		else
 		{
-			System.out.println("Bangalore is not selected"); 
+			Reporter.log("Bangalore is not selected"); 
 			sp.clickOnDropdown();
 			w.until(ExpectedConditions.visibilityOf(sp.bangalorecity));
 			sp.selectBangalore();
@@ -157,11 +163,11 @@ public class Runner
 		String actualmsg=rp.getoutputtext();
 		if(actualmsg.equals(rp.expectedmsg))
 		{
-			System.out.println("Test Passed");
+			Reporter.log("Test Passed");
 		}
 		else
 		{
-			System.out.println("Test Failed");
+			Reporter.log("Test Failed");
 			tu.screenshot();
 		}
 	}
@@ -170,6 +176,6 @@ public class Runner
 	public void stopExecution() throws Exception
 	{
 		tu.closeapp(driver);
-		tu.stopAppiumServer();
+		tu.stopAppiumServer();	
 	}	
 }
