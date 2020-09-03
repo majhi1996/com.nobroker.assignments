@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="159861" started-at="2020-09-03T10:28:55 IST" finished-at="2020-09-03T10:31:35 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="159861" started-at="2020-09-03T10:28:55 IST" finished-at="2020-09-03T10:31:35 IST">
+      <class name="tests.Runner">
+        <test-method status="PASS" signature="startExecution()[pri:0, instance:tests.Runner@27a8c74e]" name="startExecution" is-config="true" duration-ms="21368" started-at="2020-09-03T10:28:55 IST" finished-at="2020-09-03T10:29:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startExecution -->
+        <test-method status="PASS" signature="homepage()[pri:1, instance:tests.Runner@27a8c74e]" name="homepage" duration-ms="21777" started-at="2020-09-03T10:29:17 IST" finished-at="2020-09-03T10:29:38 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepage -->
+        <test-method status="PASS" signature="search()[pri:2, instance:tests.Runner@27a8c74e]" name="search" duration-ms="20380" started-at="2020-09-03T10:29:38 IST" finished-at="2020-09-03T10:29:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method status="PASS" signature="propertylist()[pri:3, instance:tests.Runner@27a8c74e]" name="propertylist" duration-ms="54430" started-at="2020-09-03T10:29:59 IST" finished-at="2020-09-03T10:30:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- propertylist -->
+        <test-method status="PASS" signature="signin()[pri:4, instance:tests.Runner@27a8c74e]" name="signin" duration-ms="10908" started-at="2020-09-03T10:30:53 IST" finished-at="2020-09-03T10:31:04 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signin -->
+        <test-method status="PASS" signature="report()[pri:5, instance:tests.Runner@27a8c74e]" name="report" duration-ms="30361" started-at="2020-09-03T10:31:04 IST" finished-at="2020-09-03T10:31:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="stopExecution()[pri:0, instance:tests.Runner@27a8c74e]" name="stopExecution" is-config="true" duration-ms="529" started-at="2020-09-03T10:31:34 IST" finished-at="2020-09-03T10:31:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopExecution -->
+      </class> <!-- tests.Runner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
